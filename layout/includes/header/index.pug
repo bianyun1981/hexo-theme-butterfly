@@ -4,7 +4,7 @@ if page.top_img !== false
   else if is_page()
     - var top_img = page.top_img || theme.default_top_img
   else if is_tag()
-    - var top_img = theme.tag_per_img && theme.tag_per_img[page.tag] 
+    - var top_img = theme.tag_per_img && theme.tag_per_img[page.tag]
     - top_img = top_img ? top_img : (theme.tag_img !== false ? theme.tag_img || theme.default_top_img : false)
   else if is_category()
     - var top_img = theme.category_per_img && theme.category_per_img[page.category]
@@ -19,7 +19,7 @@ if page.top_img !== false
   if top_img !== false
     - var imgSource = top_img && top_img.indexOf('/') !== -1 ? `background-image: url(${url_for(top_img)})` : `background: ${top_img}`
     - var bg_img = top_img ? imgSource : ''
-    - var site_title = is_archive() ? _p('page.archives') : page.title || page.tag || page.category || config.title
+    - var site_title = is_archive() ? _p('page.archives') : page.title || page.tag || page.category || config.slogan
     - var isHomeClass = is_home() ? 'full_page' : 'not-index-bg'
     - is_post() ? isHomeClass = 'post-bg' : isHomeClass
   else
@@ -33,7 +33,7 @@ header#page-header(class=isHomeClass style=bg_img)
   if top_img !== false
     if is_post()
       include ./post-info.pug
-    else if is_home() 
+    else if is_home()
       #site-info
         h1#site-title=site_title
         #site-subtitle

@@ -51,7 +51,7 @@
       .tab-item-content
         position: relative
         display: none
-        padding: 1.8rem 1.2rem
+        padding: 1.2rem 1.2rem
 
         +maxWidth768()
           padding: 1.2rem .7rem
@@ -59,12 +59,16 @@
         &.active
           display: block
           animation: tabshow .5s
-
-    .tab-to-top
-      position: relative
-      display: block
-      margin: 0 0 0 auto
-      color: $tab-to-top-color
+      :first-child
+        margin-top: 0
+      :last-child
+        margin-bottom: 0
+    //
+    //.tab-to-top
+    //  position: relative
+    //  display: block
+    //  margin: 0 0 0 auto
+    //  color: $tab-to-top-color
 
 @keyframes tabshow
   0%

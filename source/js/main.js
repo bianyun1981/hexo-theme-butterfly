@@ -715,13 +715,13 @@ document.addEventListener('DOMContentLoaded', function () {
         })
       })
     },
-    backToTop: () => {
-      document.querySelectorAll('#article-container .tabs .tab-to-top').forEach(function (item) {
-        item.addEventListener('click', function () {
-          btf.scrollToDest(btf.getEleTop(btf.getParents(this, '.tabs')), 300)
-        })
-      })
-    }
+    // backToTop: () => {
+    //   document.querySelectorAll('#article-container .tabs .tab-to-top').forEach(function (item) {
+    //     item.addEventListener('click', function () {
+    //       btf.scrollToDest(btf.getEleTop(btf.getParents(this, '.tabs')), 300)
+    //     })
+    //   })
+    // }
   }
 
   const toggleCardCategory = function () {
@@ -828,7 +828,7 @@ document.addEventListener('DOMContentLoaded', function () {
     addTableWrap()
     clickFnOfTagHide()
     tabsFn.clickFnOfTabs()
-    tabsFn.backToTop()
+    // tabsFn.backToTop()
     switchComments()
   }
 

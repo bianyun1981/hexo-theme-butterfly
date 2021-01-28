@@ -240,10 +240,10 @@ _:future,
       color: var(--white)
 
   a
-    color: var(--light-grey)
+    color: var(--white)
 
     &:hover
-      color: var(--white)
+      color: $bright-blue
 
   &.fixed
     position: fixed
@@ -298,7 +298,8 @@ _:future,
           z-index: -1
           width: 0
           height: 3px
-          background-color: lighten($theme-color, 30%)
+          background-color: $light-blue
+          //background-color: $bright-blue
           content: ''
           transition: all .3s ease-in-out
 
