@@ -2,7 +2,7 @@ if hexo-config('darkmode.enable') || hexo-config('display_mode') == 'dark'
   [data-theme='dark']
     --global-bg: darken(#121212, 2)
     --font-color: alpha(#FFFFFF, .7)
-    --hr-border: alpha(#FFFFFF, .4)
+    --hr-border: alpha(#FFFFFF, .2)
     --hr-before-color: alpha(#FFFFFF, .7)
     --search-bg: #121212
     --search-input-color: alpha(#FFFFFF, .7)
@@ -14,7 +14,7 @@ if hexo-config('darkmode.enable') || hexo-config('display_mode') == 'dark'
     --tab-botton-color: alpha(#FFFFFF, .7)
     --tab-button-hover-bg: lighten(#121212, 15)
     --tab-button-active-bg: #121212
-    --card-bg: #121212
+    --card-bg: lighten(#121212, 1)
     --sidebar-bg: #121212
     --btn-hover-color: lighten(#121212, 40)
     --btn-color: alpha(#FFFFFF, .7)
@@ -27,6 +27,13 @@ if hexo-config('darkmode.enable') || hexo-config('display_mode') == 'dark'
     --blockquote-bg: lighten(#121212, 10)
     --reward-pop: lighten(#121212, 10)
     --toc-link-color: alpha(#FFFFFF, .6)
+    --copyright-color: #4978ae
+    --framework-info-color: darken(#4978ae, 5)
+    --post-copyright-border-color: rgba(255,255,255,0.2)
+    --post-copyright-meta-color: darken($bright-blue, 20)
+    --post-copyright-link-color: #f86728
+    --post-copyright-link-hover-color: $bright-blue
+    --author-description-color: darken(#FFFFFF, 70)
 
     #web_bg:before,
     #footer:before,

@@ -2,8 +2,8 @@
   --global-font-size: $font-size
   --global-bg: $body-bg
   --font-color: $font-black
-  --hr-border: lighten($theme-hr-color, 50%)
-  --hr-before-color: lighten($theme-hr-color, 30%)
+  --hr-border: $hr-border-color
+  --hr-before-color: lighten($hr-border-color, 30%)
   --search-bg: $search-bg
   --search-input-color: $search-input-color
   --search-result-title: $search-result-title
@@ -27,6 +27,13 @@
   --blockquote-bg: $blockquote-background-color
   --reward-pop: $reward-pop-up-bg
   --toc-link-color: $toc-link-color
+  --copyright-color: $copyright-color
+  --framework-info-color: $framework-info-color
+  --post-copyright-border-color: $light-grey
+  --post-copyright-meta-color: $bright-blue
+  --post-copyright-link-color: $light-orange
+  --post-copyright-link-hover-color: $bright-blue
+  --author-description-color: lighten($font-color, 80%)
 
 html
   height: 100%
@@ -90,7 +97,8 @@ h6
 hr
   position: relative
   margin: 2rem auto
-  border: 2px dashed var(--hr-border)
+  border: 0;
+  border-top: 1px solid var(--hr-border);
 
   if hexo-config('hr_icon.enable')
     width: calc(100% - 4px)

@@ -35,11 +35,13 @@
           display: none
 
   .card-info
+    padding-left: 0
+    padding-right: 0
     img
       width: 110px
       height: 110px
       border-radius: 70px
-      transition: all .5s
+      //transition: all .5s
 
       //&:hover
       //  transform: rotate(360deg)
@@ -51,6 +53,7 @@
 
       &__description
         margin-top: -.3rem
+        color: var(--author-description-color)
 
     .card-info-data
       display: table
@@ -64,28 +67,32 @@
         a
           .headline
             @extend .limit-one-line
-            color: var(--font-color)
             font-size: 1em
+            &:hover
+              color: $bright-blue
 
           .length-num
             margin-top: -.3rem
-            color: var(--text-highlight-color)
             font-size: 1.4em
+            &:hover
+              color: $bright-blue
+
+    .card-info-data + hr
+      margin: 0.3rem 0 0.5rem
 
     .card-info-social-icons
       margin: .3rem 0 -.3rem
+      line-height: normal;
 
       .social-icon
         margin: 0 .5rem
-        color: var(--font-color)
+        color: lighten($font-color, 70%)
         font-size: 1.4em
         cursor: pointer
 
       i
-        transition: all .3s
-
         &:hover
-          transform: rotate(540deg)
+          color: $bright-blue
 
     #card-info-btn
       display: block
@@ -200,6 +207,7 @@
 
       &:hover
         padding: .15rem .85rem
+        color: $white
         background-color: var(--text-bg-hover)
 
       span

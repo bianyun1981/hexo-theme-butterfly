@@ -212,9 +212,9 @@ no-beautify()
 
   .post-copyright
     position: relative
-    margin: 2rem 0 .5rem
+    margin: 1.5rem 0 .5rem
     padding: .5rem .8rem
-    border: 1px solid var(--light-grey)
+    border: 1px solid var(--post-copyright-border-color)
     transition: box-shadow .3s ease-in-out
 
     &:before
@@ -242,7 +242,7 @@ no-beautify()
 
     .post-copyright
       &-meta
-        color: $bright-blue
+        color: var(--post-copyright-meta-color)
         font-weight: bold
 
       &-info
@@ -251,9 +251,11 @@ no-beautify()
         a
           text-decoration: none
           word-break: break-word
+          color: var(--post-copyright-link-color)
 
           &:hover
-            text-decoration: underline
+            color: var(--post-copyright-link-hover-color)
+            text-decoration: none
 
   .post-outdate-notice
     position: relative

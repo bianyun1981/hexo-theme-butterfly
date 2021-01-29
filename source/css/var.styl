@@ -3,6 +3,7 @@ $bright-blue = #49B1F5
 $strong-cyan = #00c4b6
 $light-orange = #FF7242
 $light-red = #F47466
+$hr-border-color = #ebebeb
 $themeColorEnable = hexo-config('theme_color') && hexo-config('theme_color.enable')
 $theme-color = $themeColorEnable && hexo-config('theme_color.main') ? convert(hexo-config('theme_color.main')) : $bright-blue
 $theme-paginator-color = $themeColorEnable && hexo-config('theme_color.paginator') ? convert(hexo-config('theme_color.paginator')) : $bright-blue
@@ -53,7 +54,7 @@ $blockquote-color = #6a737d
 $blockquote-padding-color = $themeColorEnable && hexo-config('theme_color.blockquote_padding_color') ? convert(hexo-config('theme_color.blockquote_padding_color')) : #49B1F5
 $blockquote-background-color = $themeColorEnable && hexo-config('theme_color.blockquote_background_color') ? alpha(convert(hexo-config('theme_color.blockquote_background_color')), .1) : alpha($blockquote-padding-color, .1)
 // page
-$body-bg = #fff
+$body-bg = #fefefe
 $a-link-color = #99a9bf
 $sticky-color = $light-orange
 $theme-meta-color = $themeColorEnable && hexo-config('theme_color.meta_color') ? convert(hexo-config('theme_color.meta_color')) : #858585
@@ -176,3 +177,6 @@ $tab-button-hover-bg = darken($tab-border-color, 8)
 $tab-active-border-color = $theme-color
 $tab-button-active-bg = $card-bg
 $tab-to-top-color = #99a9bf
+// Copyright and Framework Info
+$copyright-color = #588ece
+$framework-info-color = darken(#588ece, 5)
