@@ -134,14 +134,15 @@ case source
   default
     script.
       function subtitleType () {
-        if (!{theme.subtitle.effect}) { 
+        if (!{theme.subtitle.effect}) {
           var typed = new Typed("#subtitle", {
-            strings: "!{theme.subtitle.sub}".split(","),
+            strings: "!{theme.subtitle.sub}".split(",").sort(() => Math.random() - 0.5),
             startDelay: 300,
             typeSpeed: 150,
             loop: !{theme.subtitle.loop},
-            backSpeed: 50
-          })
+            backSpeed: 50,
+            backDelay: 1200
+          });
         } else {
           document.getElementById("subtitle").innerHTML = '!{theme.subtitle.sub[0]}'
         }
