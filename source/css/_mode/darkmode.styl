@@ -34,6 +34,7 @@ if hexo-config('darkmode.enable') || hexo-config('display_mode') == 'dark'
     --post-copyright-link-color: #f86728
     --post-copyright-link-hover-color: $bright-blue
     --author-description-color: darken(#FFFFFF, 70)
+    --code-foreground: #FA63A4
 
     #web_bg:before,
     #footer:before,
@@ -46,7 +47,7 @@ if hexo-config('darkmode.enable') || hexo-config('display_mode') == 'dark'
 
     #article-container
       code
-        background: #2c2c2c
+        background: transparent
 
       pre > code
         background: 0
@@ -69,27 +70,30 @@ if hexo-config('darkmode.enable') || hexo-config('display_mode') == 'dark'
     #article-container
       pre,
       .highlight:not(.js-file-line-container)
-        background-color: lighten(#121212, 2) !important
+        background-color: lighten(#171717, 2) !important
         color: alpha(#FFFFFF, .7) !important
 
       figure.highlight
         box-shadow: none
 
+        pre .meta
+          color: #D98E23
+
         if hexo-config('highlight_settings') && hexo-config('highlight_settings.enable')
           table::-webkit-scrollbar-thumb
-            background: lighten(#121212, 5)
+            background: lighten(#171717, 5)
 
           .line:before
             color: alpha(#FFFFFF, .7) !important
 
           .hljs
-            background-color: lighten(#121212, 2) !important
+            background-color: lighten(#171717, 2) !important
 
         pre[class*='language-']::-webkit-scrollbar-thumb
-          background: lighten(#121212, 5)
+          background: lighten(#171717, 5)
 
         .highlight-tools
-          background: lighten(#121212, 3) !important
+          background: lighten(#171717, 3) !important
           color: #90a4ae !important
 
     #post-comment
